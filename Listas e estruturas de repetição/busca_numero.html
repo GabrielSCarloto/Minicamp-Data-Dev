@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de número</title>
+</head>
+<body>
+    <script>
+        var lista = [19, 25, 45, 37, 11, 29, 63, 87, 99];
+
+        function verificaNumero(numero) {
+            var existe = false;
+
+            for (var i = 0; i < lista.length; i++) {
+                if(lista[i] === numero) {
+                    existe = true;
+                    break;
+                }
+            }
+
+            return existe;
+        }
+    </script>
+</body>
+</html>

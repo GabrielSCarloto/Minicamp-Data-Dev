@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <script>
+        // Listas começam no 0 e pode misturar string com number
+        var carros = ["Gol", "Uno", "Palio"];
+        console.log(carros);
+
+        var primeiroCarro = carros[0];
+        var segundoCarro = carros[1];
+        var terceiroCarro = carros[2];
+
+        console.log("Primeiro carro" + primeiroCarro);
+        console.log("Primeiro carro" + segundoCarro);
+        console.log("Primeiro carro" + terceiroCarro);
+
+        // Dá pra alterar o valor das listas
+        carros[2] = "Argo";
+        console.log(carros[2]);
+
+        // Tamanho do array para saber quantos elementos tem
+        console.log("Tamanho do array: " + carros.length);
+        console.log("Último elemento do array: " + carros[carros.length - 1]);
+
+        // Inserir novos elementos no final da array
+        carros[3] = "Sandero";
+        console.log("Novo último elemento: " + carros[carros.length - 1]);
+
+        carros[carros.length] = "Civic";
+        console.log("Novo último elemento: " + carros[carros.length - 1]);
+
+        carros.push("Polo");
+        console.log(carros);
+
+        // Remover o último elemento
+        console.log(carros.pop());
+        console.log(carros);
+
+        // Inserir e remover novos elementos no começo da array
+        carros.unshift("Jetta");
+        console.log(carros);
+
+        console.log(carros.shift("Jetta"));
+        console.log(carros);
+    </script>
+</body>
+</html>
