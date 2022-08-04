@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de todos os números múltiplos de 3 ou 5 que estão abaixo de 1000</title>
+</head>
+<body>
+    <script>
+        function verificarSeXEhMultiploDeY(numero1, numero2) {
+           return numero1 % numero2 === 0;
+        }
+
+        function somaMultiplos(numero1, numero2, limite) {
+            var soma = 0;
+            
+            console.time('medição')
+
+            for(var i = 0; i < limite; i++) {
+                if(verificarSeXEhMultiploDeY(i, numero1) || (verificarSeXEhMultiploDeY(i, numero2))) {
+                    soma += i;
+                }
+            }
+
+            console.timeEnd('medição');
+            return soma;
+        }
+
+        var soma1 = somaMultiplos(3, 5, 1000);
+        console.log(soma1);
+    </script>
+</body>
+</html>
